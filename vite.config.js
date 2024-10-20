@@ -3,10 +3,11 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // Define a base relativa para os caminhos
+  base: '/',
   build: {
     outDir: 'dist',
     rollupOptions: {
+      input: './src/main.jsx',
       external: [],
     },
   },
